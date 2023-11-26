@@ -1,0 +1,29 @@
+.techfont{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+
+/* Loader styles */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff; /* Initial background color */
+}
+
+/* Name styles with changing text color */
+.name {
+  animation: changeTextColor 2s linear infinite;
+}
+
+/* Keyframes for changing text colors */
+@keyframes changeTextColor {
+  0% { color: #19aacf; } /* Change these colors as needed */
+  25% { color: #e6d627; }
+  50% { color: #e6d627; }
+  75% { color: #f56495; }
+  100% { color: #fa9273; }
+}
