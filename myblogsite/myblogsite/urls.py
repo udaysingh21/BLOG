@@ -21,7 +21,7 @@ from django.contrib.auth import views # this is used to import the views for log
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",include('blog.urls')),
+    path("",include('blog.urls'),name='blog'),
     path('accounts/login/',views.LoginView.as_view(),name='login'),
     path('accounts/logout.html',views.LogoutView.as_view(),name='logout',kwargs={'next_page':'/'}), # kwargs is used to pass arguments to the view
     # next_page is used to redirect the user to the home page after logout

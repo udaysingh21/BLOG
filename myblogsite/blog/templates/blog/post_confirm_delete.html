@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'blog/base.html' %}
+{% block content %}
 
-</body>
-</html>
+<form method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ post.title }}"?</p>
+    <button type="submit" class="btn btn-danger">Yes</button>
+    <a href="{% url 'blog:post_detail' post.pk %}" class="btn btn-default">No</a>
+</form>
+
+{% endblock content %}

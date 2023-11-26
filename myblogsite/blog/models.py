@@ -26,7 +26,7 @@ class Post(models.Model):
         # this is a query set that will return only the approved comments
 
     def get_absolute_url(self): # name of function is important as it is predefined  by Django
-        return reverse('post_detail',kwargs={'pk':self.pk})
+        return reverse('blog:post_detail',kwargs={'pk':self.pk})
         # post_detail is the name of the view that we want to redirect to
         # kwargs is a dictionary that maps the pk variable from urls.py to the pk of the current post
 
